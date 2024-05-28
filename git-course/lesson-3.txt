@@ -1,0 +1,23 @@
+1.
+git commit --amend đổi lại message cho commit gần nhất
+git commit --amend -m”<message>” đổi lại message cho 1 commit bất kì
+git restore --staged <file> đưa file từ vùng staging về vùng working directory
+git reset HEAD~1 đưa file từ vùng repository về vùng working directory
+2.
+a.Tạo 3 file: file1, file2, file3
+b.Chạy lệnh: git init : vùng working directory: file1, file2, file3
+c.Chạy lệnh: git commit -m”init project” 
+d.Chạy lệnh: git add file1 : vùng staging: file1
+e.Chạy lệnh: git commit -m”add file” : vùng repository: file1, vùng working directory: file2, file3
+f.Chạy lệnh: git add . : vùng staging: file2, file3
+g.Chạy lệnh: git restore --staged file2 : vùng working directory:file2, vùng staging: file3, vùng repository: file1 
+h.Chạy lệnh: git commit -m”add all files” : vùng working directory:file2, vùng repository: file1, file3
+i.Chạy lệnh: git reset HEAD~1 : vùng working directory:file2, file3, vùng repository: file1
+3.
+a.Tạo file file1.txt, file2.txt, oops/file3.txt. 
+b.Thêm file .gitignore, thêm vào 2 dòng: 
+i.file1.txt
+ii.oops/
+c.Chạy lệnh: git add . 
+d.Chạy lệnh: git commit -m"init project" : vùng repository: file1.txt, file2.txt, file1.txt và folder oops/ nằm trong file gitignore và không nằm trong vùng nào
+

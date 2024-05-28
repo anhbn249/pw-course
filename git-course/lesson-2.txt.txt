@@ -1,0 +1,13 @@
+1.
+git init khởi tạo 1 thư mục mới được quản lý bởi git
+git add <file_name> thêm 1 file vào vùng staging
+git add . thêm tất cả file vào vùng staging
+git commit -m “message” commit các file ở vùng staging lên repository
+2.
+a.Tạo 3 file: file1, file2, file3, chưa có vùng nào
+b.Chạy lệnh: git init, vùng working directory : file1, file2, file3
+c.Chạy lệnh: git commit -m"init project", vùng working directory : file1, file2, file3
+d.Chạy lệnh: git add file1, vùng working directory : file2, file3, vùng staging: file1
+e.Chạy lệnh: git commit -m"add file1", vùng working directory : file2, file3, vùng repository: file 1
+f.Chạy lệnh: git add file, không có file nào added, vùng working directory : file2, file3, vùng repository: file 1
+	
